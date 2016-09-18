@@ -17,8 +17,8 @@ class ArticleController extends Controller
 	{
 		$articles = DB::table('articles')->paginate(2);
 		
-		return view('admin/article/index',['posts'=>$articles]);
-		#return view('admin/article/index')->withArticles(Article::all());
+		#return view('admin/article/index',['posts'=>$articles]);
+		return view('admin/article/index')->withArticles(Article::all());
 	}
 	
 	//文件创建

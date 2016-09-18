@@ -17,6 +17,10 @@
 		<h4><a href="/"><< 返回首页 </a></h4>
 		<h1 style="text-align: center;margin-top: 50px;">{{$article->title}}</h1>
 		<hr>
+		<div id="date" style="text-align: right;">
+			{{ $article->updated_at }}
+		</div>
+	
 		<div id="content" style="margin: 20px;">
 			<p>{{ $article->body }}</p>
 		</div>
@@ -29,23 +33,29 @@
 				</div>
 			@endif
 
-			<div class="form-group">
-				<label>Nickname</label>
-				<input type="text" name="nickname" class="form-control" style="width: 300px;">
-			</div>
-			<div class="form-group">
-				<label>Email address</label>
-				<input type="email" name="email" class="form-control" style="width: 300px;">
-			</div>
-			<div class="form-group">
-				<label>Home page</label>
-				<input type="text" name="website" class="form-control" style="width: 300px;">
-			</div>
-			<div class="form-group">
-				<label>Content</label>
-				<textarea name="content" id="newFormContent" class="form-control" rows="10" required="required"></textarea>
-			</div>
-
+			<div id="new">
+				<form action="{{ url('comment') }} method="POST">
+					{!! csrf_field() !!}
+					<input type="hidden" name="article_id" value="{{ $article->id }}">
+						<div class="form-group">
+							<label>Nickname</label>
+							<input type="text" name="nickname" class="form-control" style="width: 300px;">
+						</div>
+						<div class="form-group">
+							<label>Email address</label>
+							<input type="email" name="email" class="form-control" style="width: 300px;">
+						</div>
+						<div class="form-group">
+							<label>Home page</label>
+							<input type="text" name="website" class="form-control" style="width: 300px;">
+						</div>
+						<div class="form-group">
+							<label>Content</label>
+							<textarea name="content" id="newFormContent" class="form-control" rows="10" required="required"></textarea>
+						</div>
+			
+			            <button	type="submit" class="btn btn-lg btn-success col-lg-12" >新增评论</button>
+					</form>
 			<script>
 			function reply(a) {
 				var nickname = a.parentNode.parentNode.firstChild.nextSibling.getAttribute('data');	
