@@ -19,25 +19,37 @@ class CommentController extends Controller
 		return view('admin/comment/create');
 	}
 
-	public function store(Request $request){
-		$this->validate($request, [
-            'nickname'=>'required|max:20',
-            'email'=>'required',
-			'content'=>'required',
-		]);
-		
-		$comment = new Comment;
-		$comment->nickname = $request->get['nickname'];
-		$comment->email= $request->get['email'];
-		$comment->website= $request->get['website'];
-		$comment->content= $request->get['content'];
-		$comment->= $request->get[''];
-
-		
-		
-	}
+//	public function store(Request $request){
+//		$this->validate($request, [
+//            'nickname'=>'required|max:20',
+//            'email'=>'required',
+//			'content'=>'required',
+//		]);
+//		
+//		$comment = new Comment;
+//		$comment->nickname = $request->get['nickname'];
+//		$comment->email= $request->get['email'];
+//		$comment->website= $request->get['website'];
+//		$comment->content = $request->get['content'];
+//		#$comment->= $request->get[''];
+//
+//		
+//		
+//	}
 
 	public function edit(){
+
+	}
+
+	public function show(){
+		return view('index');
+	}
+
+	
+	public function delete($id){
+print_r($id);exit;
+		Comment::find($id)->delete();
+		return redirect()->back()->withInput()->withErrors('删除成功！');
 
 	}
 	

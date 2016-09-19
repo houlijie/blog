@@ -1,38 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
-	<meta name="viewport" content="width=device-width,initial-scale=1" >
+@extends('layouts.app')
 
-	<title> Learn Laravel 5 </title>
-	
-	<link href="//cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-	<script href="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-	<div id="title" style="text-align:center;">
-		<h1> Learn Laravel 5 </h1>
-		<div style="padding: 5px; font-size: 16px;"> Learn Laravel 5 </div>
-	</div>
-	<hr>
-	<div id="content">
-		<ul>
-			@foreach ($articles as $article)
-			<li style="margin: 50px 0;">
-				<div class="title">
-					<a href="{{ url('article/'.$article->id) }}">
-						<h4>{{ $article->title }}</h4>
-					</a>
-				</div>
-				<div class="body">
-					<p>{{ $article->body }}</p>
-				</div>
-			</li>
-			@endforeach
-		</ul>
-	</div>
+                <div class="panel-body">
+				
+			<h1>		二货，来条士力架吧！</h1>
 
-</body>
-</html>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
