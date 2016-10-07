@@ -27,5 +27,6 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 	Route::get('/', 'HomeController@index');
 	Route::resource('article', 'ArticleController');
 	Route::resource('comment', 'CommentController');
-	Route::get('comment/destroy','CommentController@delete');
+	Route::get('comment/{id}/deleted', 'CommentController@deleted');
+	Route::get('comment/{id}/reply', 'CommentController@reply');
 });

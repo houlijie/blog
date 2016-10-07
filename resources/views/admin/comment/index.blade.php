@@ -31,7 +31,8 @@
 									<th>{{ $comment->article_id }}</th>
 	
 									<th>
-					                 	<a href="{{ url('admin/comment/'.$comment->id.'/edit') }}" class="btn btn-success">回复</a> &nbsp; &nbsp; |&nbsp;&nbsp; <a href="{{ url('admin/comment/destroy') }}" class="btn btn-danger"> 删除</a>
+					                 	<a href="{{ url('admin/comment/'.$comment->id.'/reply') }}" class="btn btn-success">回复</a> &nbsp; &nbsp; |&nbsp;&nbsp;
+<a href="{{ url('admin/comment/'.$comment->id.'/deleted')  }}" class="btn btn-danger">删除</a> 
 									</th>
 								</tr>
 							</table>
