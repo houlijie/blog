@@ -27,3 +27,7 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 	Route::resource('article', 'ArticleController');
 	Route::resource('comment', 'CommentController');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
