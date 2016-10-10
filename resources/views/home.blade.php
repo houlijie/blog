@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+				
+			<h1>	二货，来条士力架吧！</h1>
+
                 </div>
             </div>
         </div>

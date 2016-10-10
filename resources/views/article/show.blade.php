@@ -14,7 +14,7 @@
 
 <body>
 	<div id="content" style="padding: 50px;">
-		<h4><a href="/"><< 返回首页 </a></h4>
+		<h4><a href="http://192.168.65.143/blog/public/index.php"><< 返回首页 </a></h4>
 		<h1 style="text-align: center;margin-top: 50px;">{{$article->title}}</h1>
 		<hr>
 		<div id="date" style="text-align: right;">
@@ -34,7 +34,7 @@
 			@endif
 
 			<div id="new">
-				<form action="{{ url('comment') }} method="POST">
+				<form action="{{ url('comment/store') }}" method="POST">
 					{!! csrf_field() !!}
 					<input type="hidden" name="article_id" value="{{ $article->id }}">
 						<div class="form-group">

@@ -17,15 +17,18 @@
 */
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
-#Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@home');
+Route::get('/', 'HomeController@index');
 Route::get('article/{id}', 'ArticleController@show');
-Route::post('comment', 'CommentController@store');
+Route::post('comment/store', 'CommentController@store');
+#Route::resource('comment', 'CommentController');
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
 	Route::get('/', 'HomeController@index');
 	Route::resource('article', 'ArticleController');
 	Route::resource('comment', 'CommentController');
+	Route::get('comment/{id}/deleted', 'CommentController@deleted');
+	Route::get('comment/{id}/reply', 'CommentController@reply');
 });
 
 Route::auth();

@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-heading">评论管理</div>
 				<div class="panel-body">
@@ -13,42 +12,32 @@
 						</div>
 					@endif
 
-					<a href="{{ url('admin/comment/create') }}" class="btn btn-lg btn-primary">新增</a>
 		
 					@foreach ($comments as $comment)
 						<hr>
-						<div class="comment">
-							<table>
+						<div>
+							<table class="table">
 								<tr>
-									<th>Content</th>
-									<th>User</th>
-									<th>Page</th>
-									<th>编辑</th>
-									<th>删除</th>
+									<th>作者</th>
+									<th>评论</th>
+									<th>文章</th>
+									<th>提交时间</th>
+									<th>操作</th>
 								</tr>
 								<tr>
-									<th>{{ $comment->content }}</th>
 									<th>{{ $comment->nickname }}</th>
-									<th>{{ $comment->website }}</th>
+									<th>{{ $comment->content }}</th>
+									<th>{{ $comment->article_id }}</th>
+									<th>{{ $comment->article_id }}</th>
+	
 									<th>
-					                 	<a href="{{ url('admin/comment/'.$comment->id.'/edit') }}" class="btn btn-success">编辑</a>
-									</th>
-									<th>
-									
+					                 	<a href="{{ url('admin/comment/'.$comment->id.'/reply') }}" class="btn btn-success">回复</a> &nbsp; &nbsp; |&nbsp;&nbsp;
+<a href="{{ url('admin/comment/'.$comment->id.'/deleted')  }}" class="btn btn-danger">删除</a> 
 									</th>
 								</tr>
-								
-
-
 							</table>
 						</div>
 				    
-						<a href="{{ url('admin/comment/'.$comment->id.'/edit') }}" class="btn btn-success">编辑</a>
-						<form action="{{ url('admin/comment/'.$comment->id) }}" method="POST" style="display: inline;">
-							{{ method_field('DELETE') }}	
-							{{csrf_field()}}
-							<button type="submit" class="btn btn-danger">删除</button>
-						</form>
 					@endforeach
 
 				</div>

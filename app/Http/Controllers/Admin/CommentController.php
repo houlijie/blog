@@ -46,13 +46,29 @@ class CommentController extends Controller
 		$comment->nickname = $request->get['nickname'];
 		$comment->email= $request->get['email'];
 		$comment->website= $request->get['website'];
-		$comment->content= $request->get['content'];
-		//$comment->= $request->get['']
-		
-		
+		$comment->content = $request->get['content'];
+		#$comment->= $request->get[''];
+
 	}
 
-	public function edit(){
+	public function reply($id){
+		#$comment = Comment::find($id)->toArray();
+		$comment = DB::table('comments')
+                        ->join('articles','comments.article_id','=','articles.id')
+                        ->select(DB::raw('articles.*,comments.*'))->get();
+
+		return view('admin/comment/reply',(array)$comment[0]);
+		#return view('admin/comment/reply')->withComment(Comment::find($id));
+	}
+
+	public function show(){
+		return view('index');
+	}
+
+	
+	public function deleted($id){
+		Comment::find($id)->delete();
+		return redirect()->back()->withInput()->withErrors('删除成功！');
 
 	}
    
