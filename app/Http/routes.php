@@ -33,4 +33,8 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 
 Route::auth();
 
+//Route::group(['middleware'] => 'checkage'],function(){
+//	Route::get('/home', 'HomeController@home');
+//})
+
 Route::get('/home', 'HomeController@index');

@@ -20,15 +20,15 @@
 								<tr>
 									<th>作者</th>
 									<th>评论</th>
-									<th>文章</th>
+									<th>文章标题</th>
 									<th>提交时间</th>
 									<th>操作</th>
 								</tr>
 								<tr>
 									<th>{{ $comment->nickname }}</th>
 									<th>{{ $comment->content }}</th>
-									<th>{{ $comment->article_id }}</th>
-									<th>{{ $comment->article_id }}</th>
+									<th>{{ $comment->title }}</th>
+									<th>{{ $comment->created_time }}</th>
 	
 									<th>
 					                 	<a href="{{ url('admin/comment/'.$comment->id.'/reply') }}" class="btn btn-success">回复</a> &nbsp; &nbsp; |&nbsp;&nbsp;

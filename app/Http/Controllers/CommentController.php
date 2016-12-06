@@ -17,6 +17,7 @@ class CommentController extends Controller
 	}
 	public function store(Request $request)
 	{
+		//print_r($request->all());exit();
 		if(Comment::create($request->all())){
 			return redirect()->back();
 		} else {

@@ -11,24 +11,15 @@ use DB;
 
 class CommentController extends Controller
 {
-	public function index(){
-	// DB::insert('insert into users (name,email,password) value(?,?,?)',['test3','test3@163.com','admin123']);
 
+	public function index(){
+		
 		$result = DB::table('comments')
 					->join('articles', 'comments.article_id', '=', 'articles.id')
-					->select(DB::raw('articles.*','comments.comment_id','comments.website'))
+					->select(DB::raw('*'))
 					->get();
-
-
-		echo"<pre>";print_r($result);exit();
-		
-
-
-	
-	
-	
-
-		return view('admin/comment/index')->withComments(Comment::all());
+		//$result['total1'] = count($result);
+		return view('admin/comment/index')->withComments((array)$result);
 	}
 	
 	public function create(){
@@ -47,7 +38,7 @@ class CommentController extends Controller
 		$comment->email= $request->get['email'];
 		$comment->website= $request->get['website'];
 		$comment->content = $request->get['content'];
-		#$comment->= $request->get[''];
+	//	$comment->created_time = time();
 
 	}
 

@@ -18,9 +18,15 @@ class CreateCommentsTable extends Migration
 			$table->string('email')->nullable();
 			$table->string('website')->nullable();
 			$table->string('content')->nullable();
-			$table->integer('article_id');	
-            $table->timestamps();
+			$table->integer('article_id');
+            $table->timestamp('created_time');
         });
+
+        // Schema::table('comments',function(Blueprint $table){
+        //  //   $table->dropColumn('updated_at');
+        //     $table->renameColumn('created_time','created_time');
+        // });
+
     }
 
     /**
@@ -30,6 +36,6 @@ class CreateCommentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('comments');
+        
     }
 }

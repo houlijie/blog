@@ -75,7 +75,7 @@
 							@else	
 								<h3>{{ $comment->nickname }}</h3>
 							@endif
-							<h6>{{ $comment->create_at }}</h6>
+							<h6>{{ $comment->created_time }}</h6>
 						</div>
 						<div class="content">
 							<p style="padding: 20px;">
