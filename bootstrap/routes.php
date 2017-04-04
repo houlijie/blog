@@ -22,6 +22,7 @@ Route::get('/', 'HomeController@index');
 Route::get('article/{id}', 'ArticleController@show');
 Route::post('comment/store', 'CommentController@store');
 #Route::resource('comment', 'CommentController');
+
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
 	Route::get('/', 'HomeController@index');
 	Route::resource('article', 'ArticleController');
