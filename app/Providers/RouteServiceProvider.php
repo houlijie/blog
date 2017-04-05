@@ -25,7 +25,7 @@ class RouteServiceProvider extends ServiceProvider
     public function boot(Router $router)
     {
         //
-
+       // $router->pattern('id','[0-9]+');//pattern方法定义特定路由参数遵循特定的正则匹配 eg:id必须是数字
         parent::boot($router);
     }
 
@@ -58,4 +58,6 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('bootstrap/routes.php');
         });
     }
+
+
 }
