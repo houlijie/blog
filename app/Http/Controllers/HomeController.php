@@ -24,7 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-	return view('index')->withArticles(\App\Article::all());
+        $pagedata = [
+            'test' => 1,
+            'test2' => 2,
+        ];
+	   return view('welcome', $pagedata);
     }
 
 	public function home(){
