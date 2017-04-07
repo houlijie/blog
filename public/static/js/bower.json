@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "description": "laveral_bootstrap",
+  "main": "main.json",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ]
+}
