@@ -291,8 +291,8 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
     );
 
     public static $classMap = array (
-        'App\\Article' => __DIR__ . '/../..' . '/app/Article.php',
-        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment.php',
+        'App\\Article' => __DIR__ . '/../..' . '/app/Article/Model/Article.php',
+        'App\\Comment' => __DIR__ . '/../..' . '/app/Comment/model/Comment.php',
         'App\\Console\\Commands\\Inspire' => __DIR__ . '/../..' . '/app/Console/Commands/Inspire.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Events\\Event' => __DIR__ . '/../..' . '/app/Events/Event.php',
@@ -318,7 +318,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\User' => __DIR__ . '/../..' . '/app/User/Model/User.php',
         'ArticleSeeder' => __DIR__ . '/../..' . '/database/seeds/ArticleSeeder.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
@@ -516,6 +516,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'Doctrine\\DBAL\\Driver\\PDOSqlite\\Driver' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlite/Driver.php',
         'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Connection' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Connection.php',
         'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Driver' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Driver.php',
+        'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Statement' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Statement.php',
         'Doctrine\\DBAL\\Driver\\PDOStatement' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php',
         'Doctrine\\DBAL\\Driver\\PingableConnection' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PingableConnection.php',
         'Doctrine\\DBAL\\Driver\\ResultStatement' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/ResultStatement.php',

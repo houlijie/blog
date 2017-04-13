@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Article' => $baseDir . '/app/Article.php',
-    'App\\Comment' => $baseDir . '/app/Comment.php',
+    'App\\Article' => $baseDir . '/app/Article/Model/Article.php',
+    'App\\Comment' => $baseDir . '/app/Comment/model/Comment.php',
     'App\\Console\\Commands\\Inspire' => $baseDir . '/app/Console/Commands/Inspire.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Events\\Event' => $baseDir . '/app/Events/Event.php',
@@ -33,7 +33,7 @@ return array(
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
-    'App\\User' => $baseDir . '/app/User.php',
+    'App\\User' => $baseDir . '/app/User/Model/User.php',
     'ArticleSeeder' => $baseDir . '/database/seeds/ArticleSeeder.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',
     'Carbon\\CarbonInterval' => $vendorDir . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
@@ -231,6 +231,7 @@ return array(
     'Doctrine\\DBAL\\Driver\\PDOSqlite\\Driver' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlite/Driver.php',
     'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Connection' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Connection.php',
     'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Driver' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Driver.php',
+    'Doctrine\\DBAL\\Driver\\PDOSqlsrv\\Statement' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOSqlsrv/Statement.php',
     'Doctrine\\DBAL\\Driver\\PDOStatement' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php',
     'Doctrine\\DBAL\\Driver\\PingableConnection' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/PingableConnection.php',
     'Doctrine\\DBAL\\Driver\\ResultStatement' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Driver/ResultStatement.php',
