@@ -24,14 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $pagedata = [
-            'test' => 1,
-            'test2' => 2,
-        ];
-	   return view('welcome', $pagedata);
+        $pagedata = [];
+	    return view('index', $pagedata);
     }
 
 	public function home(){
 		return view('home');
 	}
+
+    public function welcome(){
+        return view('welcome');
+    }
 }
