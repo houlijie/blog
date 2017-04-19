@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
 {
     public static $files = array (
-        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '1d1b89d124cc9cb8219922c9d5569199' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -78,10 +78,12 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
         ),
         'C' => 
         array (
+            'Cron\\' => 5,
             'ClassPreloader\\' => 15,
             'Carbon\\' => 7,
         ),
@@ -95,8 +97,8 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -214,9 +216,17 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
+        'Cron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
         'ClassPreloader\\' => 
         array (
@@ -276,17 +286,6 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
             array (
                 0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
-            'Doctrine\\Common\\Annotations\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
-            ),
-        ),
-        'C' => 
-        array (
-            'Cron' => 
-            array (
-                0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src',
-            ),
         ),
     );
 
@@ -322,6 +321,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'ArticleSeeder' => __DIR__ . '/../..' . '/database/seeds/ArticleSeeder.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
+        'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
         'ClassPreloader\\ClassList' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassList.php',
         'ClassPreloader\\ClassLoader' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassLoader.php',
         'ClassPreloader\\ClassNode' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassNode.php',
@@ -1758,6 +1758,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'League\\Flysystem\\FileNotFoundException' => __DIR__ . '/..' . '/league/flysystem/src/FileNotFoundException.php',
         'League\\Flysystem\\Filesystem' => __DIR__ . '/..' . '/league/flysystem/src/Filesystem.php',
         'League\\Flysystem\\FilesystemInterface' => __DIR__ . '/..' . '/league/flysystem/src/FilesystemInterface.php',
+        'League\\Flysystem\\FilesystemNotFoundException' => __DIR__ . '/..' . '/league/flysystem/src/FilesystemNotFoundException.php',
         'League\\Flysystem\\Handler' => __DIR__ . '/..' . '/league/flysystem/src/Handler.php',
         'League\\Flysystem\\MountManager' => __DIR__ . '/..' . '/league/flysystem/src/MountManager.php',
         'League\\Flysystem\\NotSupportedException' => __DIR__ . '/..' . '/league/flysystem/src/NotSupportedException.php',
@@ -1774,6 +1775,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'League\\Flysystem\\Plugin\\PluginNotFoundException' => __DIR__ . '/..' . '/league/flysystem/src/Plugin/PluginNotFoundException.php',
         'League\\Flysystem\\ReadInterface' => __DIR__ . '/..' . '/league/flysystem/src/ReadInterface.php',
         'League\\Flysystem\\RootViolationException' => __DIR__ . '/..' . '/league/flysystem/src/RootViolationException.php',
+        'League\\Flysystem\\SafeStorage' => __DIR__ . '/..' . '/league/flysystem/src/SafeStorage.php',
         'League\\Flysystem\\UnreadableFileException' => __DIR__ . '/..' . '/league/flysystem/src/UnreadableFileException.php',
         'League\\Flysystem\\Util' => __DIR__ . '/..' . '/league/flysystem/src/Util.php',
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
@@ -1908,6 +1910,9 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'Monolog\\Handler\\RotatingFileHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/RotatingFileHandler.php',
         'Monolog\\Handler\\SamplingHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SamplingHandler.php',
         'Monolog\\Handler\\SlackHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SlackHandler.php',
+        'Monolog\\Handler\\SlackWebhookHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SlackWebhookHandler.php',
+        'Monolog\\Handler\\Slack\\SlackRecord' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/Slack/SlackRecord.php',
+        'Monolog\\Handler\\SlackbotHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SlackbotHandler.php',
         'Monolog\\Handler\\SocketHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SocketHandler.php',
         'Monolog\\Handler\\StreamHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/StreamHandler.php',
         'Monolog\\Handler\\SwiftMailerHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/SwiftMailerHandler.php',
@@ -1923,12 +1928,17 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'Monolog\\Processor\\MemoryPeakUsageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MemoryPeakUsageProcessor.php',
         'Monolog\\Processor\\MemoryProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MemoryProcessor.php',
         'Monolog\\Processor\\MemoryUsageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php',
+        'Monolog\\Processor\\MercurialProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MercurialProcessor.php',
         'Monolog\\Processor\\ProcessIdProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/ProcessIdProcessor.php',
         'Monolog\\Processor\\PsrLogMessageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/PsrLogMessageProcessor.php',
         'Monolog\\Processor\\TagProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/TagProcessor.php',
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
+        'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
+        'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
+        'PHPUnit\\Framework\\TestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestListener.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
         'PHPUnit_Extensions_PhptTestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',
@@ -2256,6 +2266,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'PHP_Token_NEW' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_C' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_SEPARATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_NULLSAFE_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NUM_STRING' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -2293,6 +2304,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'PHP_Token_STRING' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_STRING_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_STRING_VARNAME' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_SUPER' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_SWITCH' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_Stream' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token/Stream.php',
         'PHP_Token_Stream_CachingFactory' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token/Stream/CachingFactory.php',
@@ -2307,6 +2319,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'PHP_Token_UNSET' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_UNSET_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_USE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_USE_FUNCTION' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_VAR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_VARIABLE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_WHERE' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -2768,6 +2781,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'SuperClosure\\Analyzer\\Visitor\\MagicConstantVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/Visitor/MagicConstantVisitor.php',
         'SuperClosure\\Analyzer\\Visitor\\ThisDetectorVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/Visitor/ThisDetectorVisitor.php',
         'SuperClosure\\Exception\\ClosureAnalysisException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureAnalysisException.php',
+        'SuperClosure\\Exception\\ClosureSerializationException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureSerializationException.php',
         'SuperClosure\\Exception\\ClosureUnserializationException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/ClosureUnserializationException.php',
         'SuperClosure\\Exception\\SuperClosureException' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Exception/SuperClosureException.php',
         'SuperClosure\\SerializableClosure' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/SerializableClosure.php',
@@ -3258,6 +3272,7 @@ class ComposerStaticInitaa0d7f31dd988823c866151b5e9d13e3
         'Symfony\\Component\\VarDumper\\Exception\\ThrowingCasterException' => __DIR__ . '/..' . '/symfony/var-dumper/Exception/ThrowingCasterException.php',
         'Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait' => __DIR__ . '/..' . '/symfony/var-dumper/Test/VarDumperTestTrait.php',
         'Symfony\\Component\\VarDumper\\VarDumper' => __DIR__ . '/..' . '/symfony/var-dumper/VarDumper.php',
+        'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
         'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
         'Symfony\\Component\\Yaml\\Escaper' => __DIR__ . '/..' . '/symfony/yaml/Escaper.php',
         'Symfony\\Component\\Yaml\\Exception\\DumpException' => __DIR__ . '/..' . '/symfony/yaml/Exception/DumpException.php',
