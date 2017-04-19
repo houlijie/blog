@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "doctrine/dbal": "^2.5",
         "piwik/piwik-php-tracker": "^1.0",
-        "michelf/php-markdown": "^1.7"
+        "michelf/php-markdown": "^1.7",
+        "michelf/php-smartypants": "1.6.0-beta1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

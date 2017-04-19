@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2892150e4f9bbf06c8ca9673d88e512f",
-    "content-hash": "cc8f824309030bbfac742ae75133c92d",
+    "hash": "697a91638676b4677705d06bc45f8f4e",
+    "content-hash": "8106c95f054a64ad44599882615cef74",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -972,6 +972,56 @@
                 "markdown"
             ],
             "time": "2016-10-29 18:58:20"
+        },
+        {
+            "name": "michelf/php-smartypants",
+            "version": "1.6-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michelf/php-smartypants.git",
+                "reference": "171a3a2552f33340bf3636bdb4b05eb4e406fbda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michelf/php-smartypants/zipball/171a3a2552f33340bf3636bdb4b05eb4e406fbda",
+                "reference": "171a3a2552f33340bf3636bdb4b05eb4e406fbda",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-lib": "1.6.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michel Fortin",
+                    "email": "michel.fortin@michelf.ca",
+                    "homepage": "http://michelf.ca/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net/"
+                }
+            ],
+            "description": "PHP SmartyPants",
+            "homepage": "http://michelf.ca/projects/php-smartypants/",
+            "keywords": [
+                "dashes",
+                "quotes",
+                "spaces",
+                "typographer",
+                "typography"
+            ],
+            "time": "2013-01-12 22:23:30"
         },
         {
             "name": "monolog/monolog",
@@ -3677,7 +3727,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "michelf/php-smartypants": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
