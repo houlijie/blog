@@ -35,4 +35,11 @@ gulp.task("copyfiles", function(){
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    mix.scripts(['js/jquery.js', 'js/bootstrap.js'],
+        'public/assets/js/admin.js',
+        'resources/assets'
+    );
+
+    mix.less('admin.less', 'public/assets/css/admin.css');
+    // mix.phpUnit();
 });
