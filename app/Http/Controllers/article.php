@@ -24,10 +24,9 @@ class article extends Controller
     public function showPost($slug)
     {
         $article = DB::table('articles')
-                ->where('slug', '=', $slug)
-                ->firstOrFail();
-    echo "<pre>";print_r($article);exit();
-        // $article = Article::whereSlug($slug)->firstOrFail();
-        return view('article.post')->withPost($article);
+                ->where('slug', $slug)
+                ->first();
+
+        return view('article.post')->withArticle('article', $article);
     }
 }
