@@ -21,9 +21,9 @@ class article extends Controller
         return view('article.index', compact('articles'));
     }
 
-    public function showPost()
+    public function showPost(Request $request)
     {
-        $slug = Request::get();
+        $slug = $request->get('slug');
         echo "<pre>";print_r($slug);exit();
         $article = Article::whereSlug($slug)->firstOrFail();
         return view('article.post')->withPost($article);
