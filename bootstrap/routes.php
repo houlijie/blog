@@ -11,26 +11,15 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-*/
 Route::auth();
 
-Route::get('/home', 'HomeController@home');
-Route::get('/', 'HomeController@index');
-Route::get('/welcome', 'HomeController@welcome');
-Route::get('article/{id}', 'ArticleController@show');
-Route::post('comment/store', 'CommentController@store');
-#Route::resource('comment', 'CommentController');
+Route::get('/', 'article@index');
+
+Route::group(['namespace' => 'pc', 'prefix' => 'pc'], function(){
+    Route::get('article-list', 'article@index');
+    Route::get('article/{slug}', 'article@showPost');
+});
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
-	Route::get('/', 'HomeController@index');
-	Route::resource('article', 'ArticleController');
-	Route::resource('comment', 'CommentController');
-	Route::get('comment/{id}/deleted', 'CommentController@deleted');
-	Route::get('comment/{id}/reply', 'CommentController@reply');
+    
 });
-
-Route::auth();
-
