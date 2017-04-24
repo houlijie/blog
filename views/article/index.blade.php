@@ -11,7 +11,7 @@
             <ul>
             @foreach ($articles as $article)
                 <li>
-                    <a href="/pc/article-detail.html/{{ $article->slug }}">{{ $article->title }}</a>
+                    <a href="{{ url('article-detail.html/'.$article->slug) }}">{{ $article->title }}</a>
                     <em>({{ $article->published_at }})</em>
                     <p>
                         {{ str_limit($article->content) }}

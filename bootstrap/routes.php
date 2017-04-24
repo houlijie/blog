@@ -15,9 +15,9 @@ Route::auth();
 
 Route::get('/', 'article@index');
 
-Route::group(['prefix' => 'pc'], function(){
+Route::group([],function(){
     Route::get('article-list.html', 'article@index');
-    Route::get('article-detail.html', 'article@showPost');
+    Route::get('article-detail.html/{slug}', 'article@showPost');
 });
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){

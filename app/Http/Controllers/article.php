@@ -21,11 +21,13 @@ class article extends Controller
         return view('article.index', compact('articles'));
     }
 
-    public function showPost(Request $request)
+    public function showPost($slug)
     {
-        $slug = $request->get('slug');
-        echo "<pre>";print_r($slug);exit();
-        $article = Article::whereSlug($slug)->firstOrFail();
+        $article = DB::table('articles')
+                ->where('slug', '=', $slug)
+                ->firstOrFail();
+    echo "<pre>";print_r($article);exit();
+        // $article = Article::whereSlug($slug)->firstOrFail();
         return view('article.post')->withPost($article);
     }
 }
