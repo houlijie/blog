@@ -21,12 +21,12 @@ class article extends Controller
         return view('article.index', compact('articles'));
     }
 
-    public function showPost($slug)
+    public function showDetail($slug)
     {
         $article = DB::table('articles')
                 ->where('slug', $slug)
                 ->first();
 
-        return view('article.post')->withArticle('article', $article);
+        return view('article.detail')->withArticle($article);
     }
 }
