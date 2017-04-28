@@ -15,11 +15,14 @@ Route::auth();
 
 Route::get('/', 'article@index');
 
-Route::group([],function(){
-    Route::get('article-list.html', 'article@index');
-    Route::get('article-detail.html/{slug}', 'article@showDetail');
+Route::group([],function() {
+    Route::get('articles.html', 'article@index');
+    Route::get('article.html/{slug}', 'article@showDetail');
 });
 
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function(){
-    
+    Route::get('/', 'AdminController@index');
+    Route::get('articles.html', 'ArticleController@index');
+    Route::put('article/{id}', 'ArticleController@update');
+    Route::delete('article/{id}', 'ArticleController@delete');
 });
